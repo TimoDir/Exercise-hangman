@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Internship task C: Hangman</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+	<body>
+		<main>
+			<h1>Internship task C: Hangman</h1>
+			<p>For our new Hangman game, the player will guess a secret word by trying different alphabet characters. Everytime the player guesses a letter a new string is created that only shows correctly guessed characters and "_" instead of the rest of the characters.</p>
+			<p>Create a function that returns the next masked output when called with a guessed character as a parameter. If the player didn't manage to guess the whole secret by the time he guessed 6 times without revealing a new letter, print out: "GAME OVER" instead of the mask. </p>
+
+			<h2>Input</h2>
+			<p>The guessed single character string</p>
+
+			<h2>Output</h2>
+			<p>New masked secret string that only shows correctly guessed characters,</p>
+			<p>or GAME OVER if the player guessed 6 times without revealing any new letters</p>
+
+			<h2>Sample inputs-outputs</h2>
+			<p>#1 Input: "u" &gt; Output: <span class="output">"_________"</span></p>
+			<p>#2 Input: "a" &gt; Output: <span class="output">"_a__a____"</span></p>
+			<p>#3 Input: "w" &gt; Output: <span class="output">"wa__a____"</span></p>
+			<p>#4 Input: "e" &gt; Output: <span class="output">"wa__a____"</span></p>
+			<p>#5 Input: "w" &gt; Output: <span class="output">"wa__a____"</span></p>
+			<p>#6 Input: "g" &gt; Output: <span class="output">"wa_ga___g"</span></p>
+			<p>#7 Input: "t" &gt; Output: <span class="output">"wa_ga___g"</span></p>
+			<p>#8 Input: "d" &gt; Output: <span class="output">"wa_ga___g"</span></p>
+			<p>#9 Input: "r" &gt; Output: <span class="output">"warga___g"</span></p>
+			<p>#10 Input: "s" &gt; Output: "GAME OVER"</p>
+
+			<h2>Check JS part and finish the program</h2>
+		</main>
+		<div id="log"></div>
+	</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
