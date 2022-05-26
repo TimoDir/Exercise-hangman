@@ -1,8 +1,14 @@
 // Finish the program
 const secret = "wargaming";
 function guess(character) {
+  const arrSecret = secret.toLowerCase().split('')
+  //console.log(arrSecret)
+  // Creation of the mask
+  const secretLength = secret.length;
+  const mask = new Array(secretLength).fill('_');
+  
 
-  return "_________";
+  return mask;
 }
 
 // export the function to the test unit
@@ -27,3 +33,6 @@ log(guess("d"))
 log(guess("r"))
 log(guess("s"))
 */
+//guess();
+var expetResult = secret.split('').findIndex(letter => letter.toLowerCase() == 'a')
+console.log(expetResult)
