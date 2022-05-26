@@ -9,14 +9,16 @@ function guess(character) {
   // Putting the character and the character of the secret in lower case
   const arrSecret = secret.toLowerCase().split('')
   const lowerChara = character? character.toLowerCase(): null ;
-  //console.log(arrSecret)
+
   // If character is not defined just returning the mask without couting mistake
   if(lowerChara === null){return mask.join('')};
-  // Looking if the character guess whas in the secret word
+
+  // Looking if the character guess whas in the secret word and if it's not already inside the mask
   if(arrSecret.includes(lowerChara)){
-    // Revealing logic: Looking the position of the letter in the secret word to reveale them in the mask
     if(mask.includes(lowerChara)){
       mistakeCount +=1;
+
+  // Revealing logic: Looking the position of the letter in the secret word to reveale them in the mask
     } else {
       for (let i = 0; i < arrSecret.length; i++) {
         if(arrSecret[i] === lowerChara){
@@ -25,9 +27,12 @@ function guess(character) {
       };
     };
   } else mistakeCount +=1;
-  //console.log(mask)
-  return mask.join('');
-}
+
+  // Logic looking how many mistake was made if 6 or more return GAME OVER
+  if(mistakeCount >= 6 ){
+    return 'GAME OVER!'
+  } else return mask.join('');
+};
 
 // export the function to the test unit
 module.exports = guess;
@@ -52,8 +57,7 @@ log(guess("r"))
 log(guess("s"))
 */
 //guess('w');
-//console.log(guess('w'))
-console.log(guess())
+//console.log(guess())
+//console.log(guess('a'))
 //guess('w');
 //var expetResult = secret.split('').findIndex(letter => letter.toLowerCase() == 'a')
-console.log(mistakeCount)
