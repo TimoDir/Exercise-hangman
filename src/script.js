@@ -12,7 +12,20 @@ function guess(character) {
   //console.log(arrSecret)
   // If character is not defined just returning the mask without couting mistake
   if(lowerChara === null){return mask.join('')};
-  
+  // Looking if the character guess whas in the secret word
+  if(arrSecret.includes(lowerChara)){
+    // Revealing logic: Looking the position of the letter in the secret word to reveale them in the mask
+    if(mask.includes(lowerChara)){
+      mistakeCount +=1;
+    } else {
+      for (let i = 0; i < arrSecret.length; i++) {
+        if(arrSecret[i] === lowerChara){
+          mask[i] = lowerChara;
+        }
+      };
+    };
+  } else mistakeCount +=1;
+  //console.log(mask)
   return mask.join('');
 }
 
